@@ -12,36 +12,37 @@ console.log(arr);
 arr.reverse();
 console.log(arr);
 
-const strArr = ['h', 'e', 'l', 'l', 'o', ' ', 'w', 'o', 'r', 'l', 'd'];
+const strArr = ["h", "e", "l", "l", "o", " ", "w", "o", "r", "l", "d"];
 console.log(strArr.join(""));
 
-const arr1 = [1, 2, 3], arr2 = [4, 5, 6];
+const arr1 = [1, 2, 3],
+	arr2 = [4, 5, 6];
 console.log([arr1, arr2]);
 console.log([...arr1, ...arr2]);
 
-const firstObj = {one : 1};
+const firstObj = { one: 1 };
 console.log(firstObj);
 console.log(firstObj.one);
 console.log(firstObj["one"]);
 
 const anotherObj = {
-    foo: 5,
-    bar: 10,
-    bing: {
-        bang: 10000,
-        boom: 1000000
-    },
-    truth: "suffering",
-    yeet: (thing) => {
-        return thing+" has been yeeted";
-    },
-    speak: function() {
-        return "Failure";
-    },
-    attempt: function() {
-        return `Time for ${this.truth} and ${this.speak()}`;
-    }
-}
+	foo: 5,
+	bar: 10,
+	bing: {
+		bang: 10000,
+		boom: 1000000,
+	},
+	truth: "suffering",
+	yeet: (thing) => {
+		return thing + " has been yeeted";
+	},
+	speak: function () {
+		return "Failure";
+	},
+	attempt: function () {
+		return `Time for ${this.truth} and ${this.speak()}`;
+	},
+};
 console.log(anotherObj.yeet);
 console.log(anotherObj.yeet("ball"));
 console.log(anotherObj.speak);
@@ -54,13 +55,13 @@ delete anotherObj.attempt;
 console.log(Object.keys(anotherObj));
 console.log(Object.values(anotherObj));
 for (let thing in anotherObj) {
-    console.log(anotherObj[thing]);
+	console.log(anotherObj[thing]);
 }
-const { foo: myFoo, bar: myBar} = anotherObj;
+const { foo: myFoo, bar: myBar } = anotherObj;
 console.log(myFoo);
 console.log(myBar);
 function bar({ bar }) {
-    return `bar is ${bar}`;
+	return `bar is ${bar}`;
 }
 console.log(bar(anotherObj));
 
@@ -71,14 +72,14 @@ const receiveJSON = JSON.parse(sendJSON);
 console.log(receiveJSON.bing);
 
 const makeError = () => {
-    try {
-        const name = "Dave";
-        name = "Joe";
-    } catch (error) {
-        console.log(error);
-        console.warn(error);
-        console.error(error);
-        console.table(error);
-    }
+	try {
+		const name = "Dave";
+		name = "Joe";
+	} catch (error) {
+		console.log(error);
+		console.warn(error);
+		console.error(error);
+		console.table(error);
+	}
 };
 makeError();
