@@ -18,8 +18,8 @@ h1 {
 h2 {
 	background-color: rgba(0, 128, 0, 0.328);
 	position: sticky;
-	top: calc(30px + 1rem);
-	text-indent: 0.5rem;
+	top: calc(40px + 1rem);
+	text-indent: 1rem;
 	border-radius: 1rem;
 }
 
@@ -170,3 +170,28 @@ img {
     margin-bottom: 0;
     border: 0;
 } */
+
+main {
+	display: grid;
+	grid-gap: 1rem;
+	grid-template-columns: 1fr 4fr;
+	grid-auto-flow: dense;
+	padding: 1rem;
+	grid-column: span 2;
+	overflow: visible;
+}
+
+#tableOfContents {
+	padding: 1rem;
+	border-radius: 30px;
+	background-color: rgba(240, 248, 255, 0.587);
+	height: 60vh;
+	position: sticky;
+	top: 8vh;
+	font-size: 1.2rem;
+}
+
+#tableOfContents a {
+	text-decoration: none;
+	color: rgb(0, 65, 0);
+}
