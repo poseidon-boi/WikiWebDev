@@ -3,28 +3,33 @@ html {
 }
 
 body {
-	background-color: rgb(183, 249, 183);
+	/* background-color: rgb(183, 249, 183); */
+	background-color: lightgreen;
 	font-family: "Times New Roman", Times, serif;
 	line-height: 1.5;
+	margin: 0;
 }
 
 h1 {
-	font-size: 3rem;
+	font-size: 4rem;
 	text-align: center;
-	text-decoration: underline;
 	text-transform: uppercase;
+	/* display: block; */
+	vertical-align: middle;
 }
 
 h2 {
 	background-color: rgba(0, 128, 0, 0.328);
-	position: sticky;
-	top: calc(40px + 1rem);
+	/* position: sticky; */
+	/* top: calc(40px + 1rem); */
 	text-indent: 1rem;
 	border-radius: 1rem;
+	/* color: rgb(0, 65, 0); */
 }
 
 article {
-	padding: 1rem;
+	padding: 2rem 0 0 1rem;
+	margin: 0 1rem;
 }
 
 p {
@@ -61,6 +66,7 @@ nav {
 	top: 0;
 	left: 0;
 	right: 0;
+	font-size: 1.1rem;
 	background-color: darkslategray;
 	text-align: center;
 	position: fixed;
@@ -76,7 +82,7 @@ nav ul {
 nav li {
 	padding: 0;
 	display: inline-block;
-	margin-inline: 0.5rem;
+	margin-inline: 1rem;
 	position: relative;
 }
 
@@ -96,7 +102,7 @@ nav li {
 
 nav li a {
 	display: inline-block;
-	padding: 1rem;
+	padding: 0.8rem;
 	color: whitesmoke;
 	text-decoration: none;
 }
@@ -173,7 +179,7 @@ img {
 
 main {
 	display: grid;
-	grid-gap: 1rem;
+	grid-gap: 2rem;
 	grid-template-columns: 2fr 7fr;
 	grid-auto-flow: dense;
 	padding: 1rem;
@@ -186,10 +192,10 @@ main {
 	padding: 0.5rem;
 	/* border-radius: 5px; */
 	/* background-color: rgba(240, 248, 255, 0.423); */
-	height: 60vh;
+	height: 70vh;
 	position: sticky;
 	top: 13vh;
-	font-size: 1.2rem;
+	font-size: 1.1rem;
 	/* margin-top: 100vh; */
 	/* border-right: 3px gray ridge; */
 	text-transform: uppercase;
@@ -200,12 +206,13 @@ main {
 }
 
 #tableOfContents li {
-	padding: 0.25rem;
+	/* padding: 0.25rem; */
 	list-style-type: none;
 	/* border-bottom: 1px gray solid; */
 }
 
 #tableOfContents a {
+	display: block;
 	padding: 0.5rem;
 	text-decoration: none;
 	color: rgb(0, 65, 0);
@@ -217,7 +224,29 @@ main {
 	color: white;
 }
 
-.scrolledTo {
-	font-size: 1.4rem;
-	border-left: 5px green solid;
+.pageContent {
+	background-color: rgb(164, 233, 164);
+	border-radius: 10px;
+	box-shadow: 0 0 5px black;
+}
+
+footer {
+	padding: 2rem;
+	height: 40vh;
+	/* display: block; */
+	background-color: green;
+}
+
+footer a {
+	/* margin-left: 2vw; */
+	text-decoration: none;
+	color: blue;
+	background-color: lightgrey;
+	border-radius: 8px;
+	padding: 1rem;
+}
+
+footer a:hover {
+	/* color: aliceblue; */
+	background-color: lightblue;
 }

@@ -82,10 +82,10 @@ const initApp = () => {
 						title.style.borderLeftStyle = "solid";
 						title.style.borderLeftColor = "green";
 						title.style.borderLeftWidth = "5px";
-						title.style.fontSize = "1.5rem";
+						title.style.fontSize = "1.3rem";
 					} else {
 						title.style.borderLeftWidth = "0";
-						title.style.fontSize = "1.3rem";
+						title.style.fontSize = "1.1rem";
 					}
 				});
 			}
