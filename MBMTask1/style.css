@@ -3,27 +3,36 @@ html {
 }
 
 body {
-	/* background-color: rgb(183, 249, 183); */
-	background-color: lightgreen;
+	background-color: rgb(205, 249, 205);
+	/* background-color: lightgreen; */
 	font-family: "Times New Roman", Times, serif;
 	line-height: 1.5;
 	margin: 0;
 }
 
 h1 {
+	margin: 0;
+	padding: 8vh 0;
 	font-size: 4rem;
 	text-align: center;
 	text-transform: uppercase;
+	background-image: url(./h1_background.jpg);
+	background-color: rgba(255, 255, 255, 0.385);
+	background-blend-mode: lighten;
+	/* color: rgb(0, 65, 0); */
 	/* display: block; */
-	vertical-align: middle;
+	/* vertical-align: middle; */
 }
 
 h2 {
-	background-color: rgba(0, 128, 0, 0.328);
+	/* background-color: rgba(137, 43, 226, 0.564); */
+	/* background-color: rgba(255, 217, 0, 0.267); */
 	/* position: sticky; */
 	/* top: calc(40px + 1rem); */
 	text-indent: 1rem;
-	border-radius: 1rem;
+	font-size: 2rem;
+	border-bottom: 1px #e46 solid;
+	/* border-radius: 0.7rem; */
 	/* color: rgb(0, 65, 0); */
 }
 
@@ -42,7 +51,7 @@ p {
 	height: 200px;
 	padding: 1rem;
 	background-color: aliceblue;
-	color: darkgreen;
+	color: darkmagenta;
 	margin-bottom: 1rem;
 }
 
@@ -67,7 +76,7 @@ nav {
 	left: 0;
 	right: 0;
 	font-size: 1.1rem;
-	background-color: darkslategray;
+	background-color: rgb(75, 58, 91);
 	text-align: center;
 	position: fixed;
 	z-index: 1;
@@ -92,9 +101,10 @@ nav li {
 	display: none;
 	left: 50%;
 	transform: translateX(-50%);
-	background-color: darkslategray;
+	/* background-color: darkslategray; */
+	background-color: rgb(52, 40, 63);
 	opacity: 0.9;
-	border: 1px solid #ccc;
+	border: 1px solid khaki;
 	padding: 0;
 	z-index: 2;
 	text-align: center;
@@ -103,13 +113,14 @@ nav li {
 nav li a {
 	display: inline-block;
 	padding: 0.8rem;
-	color: whitesmoke;
+	color: gold;
 	text-decoration: none;
 }
 
 nav a:hover,
 nav a:focus {
-	background-color: teal;
+	background-color: blueviolet;
+	/* color: rgb(51, 40, 61); */
 	cursor: pointer;
 }
 
@@ -120,7 +131,7 @@ nav li:focus-within .dropdown-content {
 
 .dropdown-content li {
 	display: block;
-	border-bottom: 1px ridge whitesmoke;
+	border-bottom: 1px ridge khaki;
 	margin: 0 auto;
 }
 
@@ -199,6 +210,7 @@ main {
 	/* margin-top: 100vh; */
 	/* border-right: 3px gray ridge; */
 	text-transform: uppercase;
+	margin: 0 2vw;
 }
 
 #tableOfContents ul {
@@ -220,13 +232,16 @@ main {
 }
 
 #tableOfContents a:hover {
-	background-color: green;
-	color: white;
+	background-color: blueviolet;
+	/* background-color: #ccb8ed; */
+	color: gold;
 }
 
 .pageContent {
-	background-color: rgb(164, 233, 164);
+	margin: 0 4vw 0 0;
+	background-color: #e7d9ea;
 	border-radius: 10px;
+	padding: 0 2vw;
 	box-shadow: 0 0 5px black;
 }
 
@@ -234,7 +249,7 @@ footer {
 	padding: 2rem;
 	height: 40vh;
 	/* display: block; */
-	background-color: green;
+	background-color: rgb(75, 58, 91);
 }
 
 footer a {

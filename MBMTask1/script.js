@@ -70,9 +70,9 @@ const initApp = () => {
 			const heading = article.querySelector("h2");
 			const rect = article.getBoundingClientRect();
 			if (
-				(rect.top >= 0 && rect.top < window.innerHeight / 2) ||
+				(rect.top >= 0 && rect.top < window.innerHeight / 4) ||
 				(rect.bottom <= window.innerHeight &&
-					rect.bottom >= window.innerHeight / 2)
+					rect.bottom >= window.innerHeight / 4)
 			) {
 				titles.forEach((title) => {
 					if (
@@ -80,7 +80,8 @@ const initApp = () => {
 						title.textContent.toLowerCase()
 					) {
 						title.style.borderLeftStyle = "solid";
-						title.style.borderLeftColor = "green";
+						// title.style.borderLeftColor = "green";
+						title.style.borderLeftColor = "rgb(52, 40, 63)";
 						title.style.borderLeftWidth = "5px";
 						title.style.fontSize = "1.3rem";
 					} else {
