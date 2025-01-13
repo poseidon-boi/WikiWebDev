@@ -1,7 +1,13 @@
 html {
 	scroll-behavior: smooth;
+	/* scrollbar-width: thin; */
+	/* scrollbar-color: #e46 lightgreen; */
 	font-size: 1.2rem;
 }
+
+/* html ::-webkit-scrollbar-thumb {
+	border-radius: 1rem;
+} */
 
 body {
 	background-color: rgb(205, 249, 205);

@@ -84,9 +84,11 @@ const initApp = () => {
 						title.style.borderLeftColor = "green";
 						title.style.borderLeftColor = "#e46";
 						title.style.borderLeftWidth = "5px";
+						// title.style.color = "darkmagenta";
 						// title.style.fontSize = "1.3rem";
 					} else {
 						title.style.borderLeftWidth = "0";
+						title.style.color = "black";
 						// title.style.fontSize = "1.1rem";
 					}
 				});
