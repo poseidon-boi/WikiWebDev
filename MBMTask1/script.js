@@ -4,6 +4,7 @@ console.log(a);
 document.addEventListener("readystatechange", (event) => {
 	if (event.target.readyState === "complete") {
 		console.log("readyState: Complete");
+		document.getElementById("loading-screen").style.display = "none";
 		initApp();
 	}
 });
@@ -62,7 +63,7 @@ const initApp = () => {
 	// });
 
 	const articles = document.querySelectorAll("article");
-	const titles = document.querySelectorAll("#tableOfContents a");
+	const titles = document.querySelectorAll(".tableOfContents a");
 	const observers = new Array();
 
 	window.addEventListener("scroll", (event) => {
@@ -79,14 +80,14 @@ const initApp = () => {
 						heading.textContent.toLowerCase() ===
 						title.textContent.toLowerCase()
 					) {
-						title.style.borderLeftStyle = "solid";
-						// title.style.borderLeftColor = "green";
-						title.style.borderLeftColor = "rgb(52, 40, 63)";
+						title.style.borderLeftStyle = "groove";
+						title.style.borderLeftColor = "green";
+						title.style.borderLeftColor = "#e46";
 						title.style.borderLeftWidth = "5px";
-						title.style.fontSize = "1.3rem";
+						// title.style.fontSize = "1.3rem";
 					} else {
 						title.style.borderLeftWidth = "0";
-						title.style.fontSize = "1.1rem";
+						// title.style.fontSize = "1.1rem";
 					}
 				});
 			}
