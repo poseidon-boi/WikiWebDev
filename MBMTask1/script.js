@@ -81,8 +81,7 @@ const initApp = () => {
 						title.textContent.toLowerCase()
 					) {
 						title.style.borderLeftStyle = "groove";
-						title.style.borderLeftColor = "green";
-						title.style.borderLeftColor = "#e46";
+						title.style.borderLeftColor = "blueviolet";
 						title.style.borderLeftWidth = "5px";
 						// title.style.color = "darkmagenta";
 						// title.style.fontSize = "1.3rem";
