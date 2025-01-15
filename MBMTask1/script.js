@@ -70,10 +70,10 @@ const initApp = () => {
 		articles.forEach((article) => {
 			const heading = article.querySelector("h2");
 			const rect = article.getBoundingClientRect();
+			const windowHeight = window.innerHeight;
 			if (
-				(rect.top >= 0 && rect.top < window.innerHeight / 4) ||
-				(rect.bottom <= window.innerHeight &&
-					rect.bottom >= window.innerHeight / 4)
+				(rect.top >= 0 && rect.top < windowHeight / 4) ||
+				(rect.bottom <= windowHeight && rect.bottom >= windowHeight / 4)
 			) {
 				titles.forEach((title) => {
 					if (
