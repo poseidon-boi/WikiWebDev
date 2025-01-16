@@ -67,6 +67,7 @@ const initApp = () => {
 	const observers = new Array();
 
 	window.addEventListener("scroll", (event) => {
+		let index = 0;
 		articles.forEach((article) => {
 			const heading = article.querySelector("h2");
 			const rect = article.getBoundingClientRect();
