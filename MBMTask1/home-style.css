@@ -16,6 +16,20 @@ body {
 	margin: 0;
 }
 
+h1 {
+	margin-top: 3.1rem;
+	padding: 38vh 0;
+	font-size: 4rem;
+	text-align: center;
+	text-transform: uppercase;
+	background-image: url(./h1_background_copy.jpg);
+	background-color: rgba(255, 255, 255, 0.385);
+	background-blend-mode: lighten;
+	/* color: rgb(0, 65, 0); */
+	/* display: block; */
+	/* vertical-align: middle; */
+}
+
 main h2 {
 	padding-top: 2rem;
 	margin: 0 2rem 5vh 2rem;
@@ -239,7 +253,6 @@ footer .social-icons img {
 
 .slide {
 	position: sticky;
-	overflow: hidden;
 }
 
 #slide1 {
