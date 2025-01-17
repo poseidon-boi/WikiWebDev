@@ -252,29 +252,31 @@ footer .social-icons img {
 }
 
 .slide {
+	margin-top: 5vw;
 	position: sticky;
 }
 
 #slide1 {
+	margin: 0;
 	top: 3.1rem;
 	height: 100vh;
-	background-color: aquamarine;
+	background-color: lightgreen;
 }
 
 #slide2 {
 	top: calc(3.1rem + 15vh);
 	height: 85vh;
-	background-color: aqua;
+	background-color: aquamarine;
 }
 
 #slide3 {
 	top: calc(3.1rem + 30vh);
 	height: 70vh;
-	background-color: skyblue;
+	background-color: aqua;
 }
 
 #slide4 {
 	top: calc(3.1rem + 45vh);
 	height: 55vh;
-	background-color: lightgreen;
+	background-color: skyblue;
 }
