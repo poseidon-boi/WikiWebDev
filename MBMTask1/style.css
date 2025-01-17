@@ -252,23 +252,18 @@ main {
 
 footer {
 	padding: 1rem;
-	height: 40vh;
+	/* height: 40vh; */
 	/* display: block; */
 	background-color: rgb(75, 58, 91);
 }
 
-footer a {
-	/* margin-left: 2vw; */
-	/* text-decoration: none;
-	color: blue;
-	background-color: lightgrey;
-	border-radius: 8px;
-	padding: 1rem; */
+footer .social-icons a:hover {
+	border-radius: 2px;
+	box-shadow: 0 0 8px aliceblue, inset 0 0 8px aliceblue;
 }
 
-footer a:hover {
+#insta-link:hover {
 	border-radius: 12px;
-	box-shadow: 0 0 8px aliceblue, inset 0 0 8px aliceblue;
 }
 
 footer h2 {
@@ -276,7 +271,7 @@ footer h2 {
 	font-family: Arial, Helvetica, sans-serif;
 	font-weight: bold;
 	color: white;
-	margin: 1rem;
+	margin: 0.8rem;
 }
 
 footer .social-icons {
@@ -290,8 +285,56 @@ footer .social-icons a {
 
 footer .social-icons img {
 	height: 50px;
-	width: 50px;
+	/* width: 50px; */
 	vertical-align: middle;
+}
+
+#mbm-icon {
+	background-color: white;
+}
+
+.sponsors {
+	display: flex;
+	justify-content: center;
+	overflow: hidden;
+	width: 100%;
+}
+
+.sponsors img {
+	background-color: white;
+	height: 80px;
+	margin: 0 10px;
+}
+
+.carousel-track {
+	display: flex;
+	animation: scroll 20s linear infinite;
+}
+
+@keyframes scroll {
+	0% {
+		transform: translateX(0);
+	}
+
+	100% {
+		transform: translateX(-100%);
+	}
+}
+
+.fine-print {
+	margin: 0;
+	margin-top: 1.2rem;
+	color: white;
+	text-align: center;
+	line-height: 2rem;
+}
+
+.fine-print a {
+	color: white;
+}
+
+.fine-print a:hover {
+	color: aquamarine;
 }
 
 #loading-screen {
