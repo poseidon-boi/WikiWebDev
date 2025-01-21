@@ -97,11 +97,13 @@ const initApp = () => {
 
 	const articles = document.querySelectorAll("article");
 	const titles = document.querySelectorAll(".tableOfContents a");
-	const observers = new Array();
 	const counterElements = document.querySelectorAll(".counter");
+	const counterTriggered = new Array(counterElements.length);
+	for (let i = 0; i < counterElements.length; i++) {
+		counterTriggered[i] = false;
+	}
 
 	window.addEventListener("scroll", (event) => {
-		let index = 0;
 		const windowHeight = window.innerHeight;
 		articles.forEach((article) => {
 			const heading = article.querySelector("h2");
@@ -128,18 +130,19 @@ const initApp = () => {
 				});
 			}
 		});
+		let i = 0;
 		counterElements.forEach((counterElement) => {
 			const rect = counterElement.getBoundingClientRect();
 			if (
 				(rect.top >= 0 && rect.top < windowHeight) ||
 				(rect.bottom <= windowHeight && rect.bottom >= 0)
 			) {
-				const currentValue = parseInt(counterElement.innerText);
-				const endValue = parseInt(counterElement.getAttribute("data-val"));
-				if (currentValue < endValue) {
+				if (counterTriggered[i] === false) {
 					count(counterElement);
+					counterTriggered[i] = true;
 				}
 			}
+			i++;
 		});
 	});
 
