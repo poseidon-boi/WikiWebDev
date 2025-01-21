@@ -28,11 +28,12 @@ function count(counterElement) {
 	// }
 	const animate = () => {
 		if (currentValue < endValue) {
-			counterElement.innerText = currentValue;
-			currentValue += Math.ceil(increment);
+			counterElement.innerText = Math.ceil(currentValue);
+			currentValue += increment;
+			// console.log(currentValue);
 			setTimeout(animate, 1);
 		} else {
-			console.log("Counting complete");
+			console.log("Counting complete " + endValue);
 			counterElement.innerText = endValue;
 			return;
 		}
