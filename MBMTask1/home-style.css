@@ -252,7 +252,7 @@ footer .social-icons img {
 }
 
 .slide {
-	margin-top: 5vw;
+	margin-top: 10vw;
 	position: sticky;
 }
 
@@ -279,4 +279,10 @@ footer .social-icons img {
 	top: calc(3.1rem + 45vh);
 	height: 55vh;
 	background-color: skyblue;
+}
+
+.counter {
+	font-size: 1.5rem;
+	text-decoration: underline;
+	color: blueviolet;
 }
