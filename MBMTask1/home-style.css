@@ -1,6 +1,12 @@
+@font-face {
+	font-family: montreal;
+	src: url(./FontDump/NeueMontreal-Regular.otf);
+}
+
 * {
 	margin: 0;
 	padding: 0;
+	font-family: montreal;
 }
 
 html {

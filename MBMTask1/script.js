@@ -1,6 +1,3 @@
-let a = 10;
-console.log(a);
-
 document.addEventListener("readystatechange", (event) => {
 	if (event.target.readyState === "complete") {
 		console.log("readyState: Complete");
@@ -15,7 +12,7 @@ document.addEventListener("readystatechange", (event) => {
  */
 function count(counterElement) {
 	// console.log("Counting");
-	let currentValue = parseInt(counterElement.innerText);
+	let currentValue = parseInt(counterElement.textContent);
 	const endValue = parseInt(counterElement.getAttribute("data-val"));
 	if (currentValue == endValue) {
 		return;
@@ -28,13 +25,13 @@ function count(counterElement) {
 	// }
 	const animate = () => {
 		if (currentValue < endValue) {
-			counterElement.innerText = Math.ceil(currentValue);
+			counterElement.textContent = Math.ceil(currentValue);
 			currentValue += increment;
 			// console.log(currentValue);
 			setTimeout(animate, 1);
 		} else {
 			console.log("Counting complete " + endValue);
-			counterElement.innerText = endValue;
+			counterElement.textContent = endValue;
 			return;
 		}
 	};
@@ -145,52 +142,4 @@ const initApp = () => {
 			i++;
 		});
 	});
-
-	// for (let i = 0; i < articles.length; i++) {
-	// 	const article = articles[i];
-	// const heading = article.querySelector("h2");
-	// console.log(heading.textContent);
-	// console.log(titles[i].textContent);
-	// console.log(heading.textContent === titles[i].textContent);
-	// article.addEventListener("", (event) => {
-	// 	console.log("Scrolled");
-	// for (let j = 0; j < titles.length; j++) {
-	// 	const title = titles[j];
-	// 	console.log(title);
-	// 	if (heading.textContent === title.textContent) {
-	// 		title.style.classList.toggle("scrolledTo");
-	// 	}
-	// 	}
-	// });
-	// const observer = new IntersectionObserver((entries, observer) => {
-	// 	entries.forEach((entry) => {
-	// 		if (entry.intersectionRatio > 0) {
-	// 			console.log("Triggered");
-	// 			console.log(observer);
-	// 			console.log(entry);
-	// 			const heading = entry.target.querySelector("h2");
-	// 			for (let j = titles.length - 1; j >= 0; j--) {
-	// 				const title = titles[j];
-	// 				console.log(title);
-	// if (heading.textContent === title.textContent) {
-	// 	title.style.borderLeftStyle = "solid";
-	// 	title.style.borderLeftColor = "green";
-	// 	title.style.borderLeftWidth = "5px";
-	// 	title.style.fontSize = "1.5rem";
-	// } else {
-	// 	title.style.borderLeftWidth = "0";
-	// 	title.style.fontSize = "1.3rem";
-	// 				}
-	// 			}
-	// 		}
-	// 	});
-	// });
-	// observer.observe(article);
-	// observers.push(observer);
-	// }
-
-	// anchor.addEventListener("mouseout", (event) => {
-	//     footer.style.textAlign = "left";
-	//     event.target.textContent = "Back to top";
-	// })
 };
