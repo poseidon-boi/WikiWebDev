@@ -33,6 +33,7 @@ h1 {
 	background-blend-mode: lighten;
 	background-size: cover;
 	background-repeat: no-repeat;
+	background-attachment: fixed;
 	/* color: rgb(0, 65, 0); */
 	/* display: block; */
 	/* vertical-align: middle; */

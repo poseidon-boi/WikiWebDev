@@ -17,21 +17,24 @@ function count(counterElement) {
 	if (currentValue == endValue) {
 		return;
 	}
-	const divisions = 400;
+	const divisions = 399;
 	const increment = endValue / divisions;
+	const numFormatObject = new Intl.NumberFormat("en-US");
 	// for (; currentValue < endValue; currentValue += time) {
 	// 	counterElement.innerText = Math.ceil(currentValue);
 	// 	setTimeout(count, 1);
 	// }
 	const animate = () => {
 		if (currentValue < endValue) {
-			counterElement.textContent = Math.ceil(currentValue);
+			counterElement.textContent = numFormatObject.format(
+				Math.ceil(currentValue)
+			);
 			currentValue += increment;
 			// console.log(currentValue);
 			setTimeout(animate, 1);
 		} else {
 			console.log("Counting complete " + endValue);
-			counterElement.textContent = endValue;
+			counterElement.textContent = numFormatObject.format(endValue);
 			return;
 		}
 	};
@@ -117,11 +120,14 @@ const initApp = () => {
 						title.style.borderLeftStyle = "groove";
 						title.style.borderLeftColor = "blueviolet";
 						title.style.borderLeftWidth = "5px";
+						// title.style.color = "black";
+						// title.style.fontWeight = "bold";
 						// title.style.color = "darkmagenta";
 						// title.style.fontSize = "1.3rem";
 					} else {
 						title.style.borderLeftWidth = "0";
-						title.style.color = "black";
+						// title.style.color = "darkgreen";
+						// title.style.fontWeight = "normal";
 						// title.style.fontSize = "1.1rem";
 					}
 				});
