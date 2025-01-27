@@ -96,7 +96,7 @@ const initApp = () => {
 	// });
 
 	const articles = document.querySelectorAll("article");
-	const titles = document.querySelectorAll(".tableOfContents a");
+	const titles = document.querySelectorAll(".tableOfContents > ol > li > a");
 	const counterElements = document.querySelectorAll(".counter");
 	const counterTriggered = new Array(counterElements.length);
 	for (let i = 0; i < counterElements.length; i++) {
@@ -109,29 +109,26 @@ const initApp = () => {
 			const heading = article.querySelector("h2");
 			const rect = article.getBoundingClientRect();
 			if (
-				(rect.top >= 0 && rect.top < windowHeight / 4) ||
-				(rect.bottom <= windowHeight && rect.bottom >= windowHeight / 4)
+				!(rect.top >= 0 && rect.top < windowHeight / 4) &&
+				!(rect.bottom <= windowHeight && rect.bottom >= windowHeight / 4)
 			) {
-				titles.forEach((title) => {
-					if (
-						heading.textContent.toLowerCase() ===
-						title.textContent.toLowerCase()
-					) {
-						title.style.borderLeftStyle = "groove";
-						title.style.borderLeftColor = "blueviolet";
-						title.style.borderLeftWidth = "5px";
-						// title.style.color = "black";
-						// title.style.fontWeight = "bold";
-						// title.style.color = "darkmagenta";
-						// title.style.fontSize = "1.3rem";
-					} else {
-						title.style.borderLeftWidth = "0";
-						// title.style.color = "darkgreen";
-						// title.style.fontWeight = "normal";
-						// title.style.fontSize = "1.1rem";
-					}
-				});
+				return;
 			}
+			titles.forEach((title) => {
+				if (
+					heading.textContent.toLowerCase() !== title.textContent.toLowerCase()
+				) {
+					title.style.borderLeftWidth = "0";
+					return;
+				}
+				title.style.borderLeftStyle = "groove";
+				title.style.borderLeftColor = "blueviolet";
+				title.style.borderLeftWidth = "5px";
+				// title.style.color = "black";
+				// title.style.fontWeight = "bold";
+				// title.style.color = "darkmagenta";
+				// title.style.fontSize = "1.3rem";
+			});
 		});
 		let i = 0;
 		counterElements.forEach((counterElement) => {

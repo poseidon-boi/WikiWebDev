@@ -175,11 +175,21 @@ p {
 	width: 56px;
 }
 
+figure {
+	margin: 1vh 1vw;
+}
+
 main img {
 	display: block;
 	padding: 0;
-	margin: 2rem auto;
+	margin: 2rem auto 0 auto;
 	border: 1px ridge darkgreen;
+}
+
+figcaption {
+	text-align: center;
+	color: gray;
+	font-style: italic;
 }
 
 .columns {
@@ -224,7 +234,7 @@ main {
 	overflow-x: hidden;
 }
 
-.tableOfContents ul {
+.tableOfContents ol {
 	padding-left: 0;
 }
 
@@ -260,7 +270,7 @@ main {
 	box-shadow: 0 0 5px black;
 }
 
-@media screen and (max-width: 481px) {
+@media screen and (max-width: 576px) {
 	main {
 		display: block;
 		padding: 0;
@@ -269,6 +279,30 @@ main {
 
 	.tableOfContents {
 		display: none;
+	}
+
+	.pageContent {
+		margin: 0;
+		border-radius: 0;
+		box-shadow: none;
+	}
+
+	.bottom-nav h3 {
+		display: none;
+	}
+
+	.bottom-nav ul {
+		padding: 0;
+	}
+
+	.left,
+	.right {
+		float: none;
+		margin: 0;
+	}
+
+	img {
+		max-width: 80vw;
 	}
 }
 
