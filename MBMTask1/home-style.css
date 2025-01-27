@@ -28,7 +28,7 @@ h1 {
 	font-size: 4rem;
 	text-align: center;
 	text-transform: uppercase;
-	background-image: url(./h1_background_copy.jpg);
+	background-image: url(./h1_background.jpg);
 	background-color: rgba(255, 255, 255, 0.385);
 	background-blend-mode: lighten;
 	background-size: cover;
