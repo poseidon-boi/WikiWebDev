@@ -20,11 +20,17 @@ body {
 	font-family: "Times New Roman", Times, serif;
 	line-height: 1.5;
 	margin: 0;
+	background-image: url(./h1_background.jpg);
+	background-attachment: fixed;
+	/* background-blend-mode: lighten; */
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
 }
 
 h1 {
 	margin-top: 3.1rem;
-	padding: 38vh 0;
+	padding: 18vh 0;
 	font-size: 4rem;
 	text-align: center;
 	text-transform: uppercase;
@@ -34,6 +40,7 @@ h1 {
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
+	background-position: center;
 	/* color: rgb(0, 65, 0); */
 	/* display: block; */
 	/* vertical-align: middle; */
@@ -66,6 +73,10 @@ main p {
 	list-style-type: none;
 	margin: 0;
 	padding: 0;
+}
+
+.navbar > ul {
+	padding-left: 60px;
 }
 
 .navbar li {
@@ -182,6 +193,9 @@ footer .social-icons img {
 
 #mbm-icon {
 	background-color: white;
+	height: 46px;
+	border-radius: 4px;
+	padding: 2px;
 }
 
 .sponsors {
@@ -261,33 +275,37 @@ footer .social-icons img {
 }
 
 .slide {
-	margin-top: 10vw;
+	margin-top: 20vw;
 	position: sticky;
+	/* background-blend-mode: ; */
+	/* background-image: url(./Wave-Transparent.png); */
+	background-position: center;
+	background-size: cover;
 }
 
 #slide1 {
 	margin: 0;
 	top: 3.1rem;
 	height: 100vh;
-	background-color: lightgreen;
+	background-color: aquamarine;
 }
 
 #slide2 {
 	top: calc(3.1rem + 15vh);
 	height: 85vh;
-	background-color: aquamarine;
+	background-color: aqua;
 }
 
 #slide3 {
 	top: calc(3.1rem + 30vh);
 	height: 70vh;
-	background-color: aqua;
+	background-color: lightskyblue;
 }
 
 #slide4 {
 	top: calc(3.1rem + 45vh);
 	height: 55vh;
-	background-color: skyblue;
+	background-color: deepskyblue;
 }
 
 .counter {

@@ -56,7 +56,7 @@ main {
 }
 
 .column2 {
-	margin-top: 4vh;
+	margin-top: 12.5vw;
 }
 
 .team-member {
@@ -164,6 +164,10 @@ main {
 	list-style-type: none;
 	margin: 0;
 	padding: 0;
+}
+
+.navbar > ul {
+	padding-left: 60px;
 }
 
 .navbar li {
@@ -280,6 +284,9 @@ footer .social-icons img {
 
 #mbm-icon {
 	background-color: white;
+	height: 46px;
+	border-radius: 4px;
+	padding: 2px;
 }
 
 .sponsors {
@@ -367,24 +374,52 @@ footer .social-icons img {
 .bottom-nav ul {
 	display: flex;
 	justify-content: space-between;
-	margin: 2vw 8vw 2vw 5vw;
+	margin: 2vw 5vw;
 	list-style-type: none;
+	padding: 0;
 }
 
 .bottom-nav a {
-	display: inline-block;
+	/* display: inline-block; */
 	text-decoration: none;
 	color: gold;
-	background-color: blueviolet;
-	padding: 1rem;
+	/* background-color: blueviolet; */
+	/* padding: 1rem; */
 	/* box-sizing: border-box; */
 	/* border: 3px rgb(52, 40, 63) solid; */
-	border: 3px black solid;
+	/* border: 3px black solid; */
+	display: flex;
+	align-items: center;
+}
+
+.box {
+	background-color: blueviolet;
+	/* height: 60px; */
+	padding: 1.22rem;
+	/* border-radius: 3px; */
+	text-wrap: nowrap;
+}
+
+.left-arrow,
+.right-arrow {
+	width: 0;
+	height: 0;
+	border-top: 2rem solid transparent;
+	border-bottom: 2rem solid transparent;
+}
+
+.left-arrow {
+	border-right: 2rem solid blueviolet;
+}
+
+.right-arrow {
+	border-left: 2rem solid blueviolet;
 }
 
 .bottom-nav a:hover {
 	/* border: 3px blueviolet solid; */
-	box-shadow: 0 0 10px blueviolet;
+	/* box-shadow: 0 0 10px blueviolet; */
+	color: aquamarine;
 }
 
 .bottom-nav ul li {
@@ -397,12 +432,16 @@ footer .social-icons img {
 	margin: 0.5rem 0;
 }
 
-.bottom-nav ul li .previous-page {
-	border-top-left-radius: 20rem;
-	border-bottom-left-radius: 20rem;
-}
+@media screen and (max-width: 768px) {
+	.bottom-nav ul {
+		padding: 0;
+		/* margin: 1vw; */
+		flex-direction: column;
+		align-items: center;
+		/* justify-content: space-evenly; */
+	}
 
-.bottom-nav ul li .next-page {
-	border-top-right-radius: 20rem;
-	border-bottom-right-radius: 20rem;
+	.bottom-nav a {
+		margin: 1vw 0;
+	}
 }
